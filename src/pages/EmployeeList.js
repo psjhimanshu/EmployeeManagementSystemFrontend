@@ -50,6 +50,9 @@ const EmployeeList = () => {
 
   const alphabetRegex = /^[A-Za-z]+(?: [A-Za-z]+)*$/;
 
+    newEmployee.email = newEmployee.email.toLowerCase();
+
+
   if (!newEmployee.name.trim()) {
     formErrors.name = "Name is required";
   } else if (newEmployee.name.length < 3) {
@@ -59,14 +62,15 @@ const EmployeeList = () => {
   }
 
 
-  if (!newEmployee.email.trim()) {
+ if (!newEmployee.email.trim()) {
     formErrors.email = "Email is required";
-  } else if (
-    !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(newEmployee.email.trim())
-  ) {
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(newEmployee.email.trim())) {
     formErrors.email = "Invalid email format";
+  } else if (employees.some(emp => emp.email.toLowerCase() === newEmployee.email.trim().toLowerCase())) {
+    formErrors.email = "This email is already in use";
   }
 
+  
   if (!newEmployee.position.trim()) {
     formErrors.position = "Position is required";
   } else if (newEmployee.position.length < 2) {
@@ -178,7 +182,7 @@ const EmployeeList = () => {
                   className="form-control mb-2"
                   placeholder="Email"
                   value={newEmployee.email}
-                  onChange={(e) => setNewEmployee({ ...newEmployee, email: e.target.value })}
+                  onChange={(e) => setNewEmployee({ ...newEmployee, email: e.target.value.toLowerCase() })}
                 />
                 {errors.email && <p className="text-danger">{errors.email}</p>}
 
@@ -223,7 +227,7 @@ const EmployeeList = () => {
                   className="form-control mb-2"
                   value={editingEmployee.email}
                   onChange={(e) =>
-                    setEditingEmployee({ ...editingEmployee, email: e.target.value })
+                    setEditingEmployee({ ...editingEmployee, email: e.target.value.toLowerCase() })
                   }
                 />
                 <input
