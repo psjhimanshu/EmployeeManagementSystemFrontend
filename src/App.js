@@ -12,8 +12,8 @@ function App() {
 
   return (
     <div className="container">
-      <h1 className="mt-3">Employee Management</h1>
-      <AddEmployee onAdded={handleAdded} />
+      {/* <h1 className="mt-3">Employee Management</h1> */}
+      {/* <AddEmployee onAdded={handleAdded} /> */}
       <EmployeeList key={refresh} />
     </div>
   );
