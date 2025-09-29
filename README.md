@@ -36,9 +36,9 @@ Frontend: React.js
 
 Backend: Spring Boot (Java)
 
-Database: MySQL / PostgreSQL / MongoDB (depending on your choice)
+Database: MySQL (sqlLite)
 
-Libraries/Tools:
+<h3>Libraries/Tools:</h3>
 
 React Router (for routing)
 
