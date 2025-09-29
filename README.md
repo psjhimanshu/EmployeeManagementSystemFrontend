@@ -1,70 +1,192 @@
-# Getting Started with Create React App
+<h1>Employee Management System</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## FrontEnd Url- https://github.com/psjhimanshu/EmployeeManagementSystemFrontend
 
-## Available Scripts
+## Backend Url- https://github.com/psjhimanshu/EmployeManagementSystemBackend
 
-In the project directory, you can run:
+<h3>Description</h3>
 
-### `npm start`
+The Employee Management System (EMS) is a full-stack web application designed to manage employee records efficiently. It allows users to perform various operations such as:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+CRUD Operations: Create, Read, Update, and Delete employee records.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Search Functionality: Find employees based on criteria like name, department, and designation.
 
-### `npm test`
+Validation: Ensures proper data entry through frontend validation and backend checks.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This system uses Spring Boot for the backend and React for the frontend, offering a seamless user experience for managing employee data.
 
-### `npm run build`
+<h3>Features</h3>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Create: Add new employee details like name, designation, department, salary, etc.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Read: View all employee records in a list.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Update: Edit employee details as needed.
 
-### `npm run eject`
+Delete: Remove an employee record.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Search: Find employees quickly using search filters.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Validation: Ensures all required fields are valid before submission (e.g., name, email, salary).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<h3>Tech Stack</h3>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Frontend: React.js
 
-## Learn More
+Backend: Spring Boot (Java)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Database: MySQL / PostgreSQL / MongoDB (depending on your choice)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Libraries/Tools:
 
-### Code Splitting
+React Router (for routing)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Axios (for making API requests)
 
-### Analyzing the Bundle Size
+Spring Data JPA / Hibernate (for ORM)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Bootstrap or Material UI (for frontend styling)
+# FrontPage
+<img width="1908" height="907" alt="image" src="https://github.com/user-attachments/assets/2707799a-8629-4f4c-9120-afd74cfa5567" />
 
-### Making a Progressive Web App
+# Add Employee
+<img width="1898" height="510" alt="image" src="https://github.com/user-attachments/assets/07417ecb-9137-4cf3-9d49-1c52ceb7bc1b" />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# Edit Employee
+<img width="1910" height="796" alt="image" src="https://github.com/user-attachments/assets/575f9920-3c9b-4098-8b8f-9e0a69c11f39" />
 
-### Advanced Configuration
+# Delete Employee
+<img width="1902" height="471" alt="image" src="https://github.com/user-attachments/assets/653164fe-a67d-48c3-80af-7bbc0972e2e2" />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+# Search Employee
+<img width="1901" height="460" alt="image" src="https://github.com/user-attachments/assets/71da138e-302d-4692-9d10-96a23666bd68" />
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<h3>Installation</h3>
+
+Follow these steps to set up the project locally.
+
+<h4>Prerequisites</h4>
+
+Ensure the following are installed:
+
+Java (JDK 11 or later)
+
+Maven (for building the Spring Boot backend)
+
+Node.js and npm (for managing frontend dependencies)
+
+MySQL or any other database system you prefer.
+
+<h3>Backend Setup (Spring Boot)</h3>
+
+1 .Clone the repository:
+
+git clone https://github.com/psjhimanshu/EmployeManagementSystemBackend
+
+
+2 .Navigate to the backend directory:
+
+cd EmployeManagementSystemBackend
+
+
+3 .Install dependencies:
+
+mvn install
+
+
+4 .Configure the database connection in src/main/resources/application.properties or application.yml file:
+
+spring.datasource.url=jdbc:mysql://localhost:3306/employee_db
+spring.datasource.username=root
+spring.datasource.password=sqlpassword
+spring.jpa.hibernate.ddl-auto=update
+
+
+5 .Run the Spring Boot application:
+
+mvn spring-boot:run
+
+
+6 .Your backend will be running on http://localhost:8080.
+
+<h3>Frontend Setup (React)</h3>
+
+1 .Navigate to the frontend directory:
+
+cd EmployeManagementSystemFrontend
+
+
+2 .Install necessary dependencies:
+
+npm install
+
+
+3 .Modify API endpoints in the frontend to point to your backend (if necessary). By default, the React app will communicate with the backend running at http://localhost:8080.
+
+4 .Run the React application:
+
+npm start
+
+
+5 .Your frontend will be running on http://localhost:3000.
+
+<h3>Usage</h3>
+
+Adding a New Employee: Go to the "Add Employee" section in the frontend, enter the employee details, and submit the form to add a new employee.
+
+Viewing Employees: Employees will be listed on the dashboard, where you can see all their details.
+
+Updating Employee Info: Click the "Edit" button next to any employee's record to update their details.
+
+Deleting an Employee: Click the "Delete" button next to any employee to remove them from the system.
+
+Search Employees: Use the search bar to filter employees by name, department, or other criteria.
+
+<h3>Validation</h3>
+
+Frontend Validation: Ensures the data entered is valid (e.g., fields like name, salary, email are required, email follows a valid pattern).
+
+Backend Validation: Ensures that no invalid data can be submitted through the API.
+
+<h3>Contributing</h3>
+
+If you'd like to contribute to the project:
+
+Fork the repository.
+
+Create a new branch:
+
+git checkout -b feature-branch
+
+
+Make your changes and commit them:
+
+git commit -m 'Add new feature'
+
+
+Push the changes to your forked repository:
+
+git push origin feature-branch
+
+
+Create a pull request to merge your changes.
+
+<h3>License</h3>
+
+This project is licensed under the MIT License - see the LICENSE
+ file for details.
+
+<h3>Acknowledgements</h3>
+
+Spring Boot
+ for building the backend.
+
+React
+ for the frontend framework.
+
+MySQL
+ or other database used for storing employee data.
